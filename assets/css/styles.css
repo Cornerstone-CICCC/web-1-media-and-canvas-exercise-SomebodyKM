@@ -5,8 +5,10 @@
 body {
     margin: 0;
     padding: 0;
+    background: url('../images/background.jpg') green no-repeat bottom center;
 }
 
 #my-canvas {
     background-color: black;
 }
+
