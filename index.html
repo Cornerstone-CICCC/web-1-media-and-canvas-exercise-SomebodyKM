@@ -4,20 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media Exercise</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
   <div class="container">
     <!-- AUDIO HTML GOES HERE -->
-
+    <audio src="./assets/audio/piano.wav" controls muted loop></audio>
     <!-- VIDEO HTML GOES HERE -->
-
+    <video src="./assets/video/ocean.mp4" controls muted poster="./assets/images/poster.jpg"></video>
     <!-- IMAGE MAP HTML GOES HERE-->
-
+    <img width="600" src="./assets/images/fruit_table.jpg" usemap="#fruit-map">
+    <map id="fruit-map">
+      <area shape="rect" coords="0,0,300,700" href="https://en.wikipedia.org/wiki/Lavandula" alt="">
+      <area shape="rect" coords="420,350,900,600" href="https://en.wikipedia.org/wiki/Orange_(fruit)" alt="">
+      <area shape="circle" coords="420,200,90" href="https://en.wikipedia.org/wiki/Coffee" alt="">
+    </map>
     <!-- CANVAS HTML GOES HERE -->
+      <canvas id="my-canvas" width="500" height="500"></canvas>
   </div>
 
   <script>
     /* CANVAS JAVASCRIPT GOES HERE */
+    const canvas = document.querySelector("#my-canvas")
+    const context = canvas.getContext('2d')
+
+    context.beginPath()
+    context.moveTo(200, 200)
+    context.lineTo(200, 350)
+    context.strokeStyle = "red"
+    context.lineWidth = 5
+    context.stroke()
+
+    context.beginPath()
+    context.moveTo(200, 200)
+    context.lineTo(350, 200)
+    context.strokeStyle = "blue"
+    context.lineWidth = 5
+    context.stroke()
+
+    context.beginPath()
+    context.moveTo(350, 200)
+    context.lineTo(350, 350)
+    context.strokeStyle = "green"
+    context.lineWidth = 5
+    context.stroke()
+
+    context.beginPath()
+    context.moveTo(350, 350)
+    context.lineTo(200, 350)
+    context.strokeStyle = "yellow"
+    context.lineWidth = 5
+    context.stroke()
+
   </script>
 </body>
 </html>
